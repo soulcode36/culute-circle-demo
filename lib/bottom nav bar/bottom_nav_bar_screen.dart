@@ -1,6 +1,8 @@
+// ignore_for_file: must_be_immutable, deprecated_member_use
+
 import 'package:demo/Home/home_screen.dart';
-import 'package:demo/cart/cart_screen.dart';
-import 'package:demo/search/search_screen.dart';
+import 'package:demo/profile/profile_screen.dart';
+import 'package:demo/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,20 +16,40 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(() => SafeArea(
           child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.white,
+              leading: Icon(
+                Icons.menu,
+                color: Colors.black,
+              ),
+              title: Row(
+                children: [
+                  Spacer(),
+                  Image.asset(
+                    "assets/images/stockx.png",
+                    height: MediaQuery.of(context).size.height * 0.050,
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.search,
+                    color: appTheme.buttonColor,
+                  )
+                ],
+              ),
+            ),
             body: IndexedStack(
               index: bottomBarController.tabIndex.value,
-              children: [const HomeScreen(), SearchScreen(), CartScreen()],
+              children: [HomeScreen(), ProfileScreen()],
             ),
             bottomNavigationBar: BottomNavigationBar(
+                selectedItemColor: appTheme.primaryColor,
+                unselectedItemColor: appTheme.buttonColor.withOpacity(0.4),
+                elevation: 10,
                 currentIndex: bottomBarController.tabIndex.value,
                 onTap: bottomBarController.chnageTabIndex,
                 items: const [
-                  BottomNavigationBarItem(
-                      label: '', icon: Icon(Icons.home_outlined)),
-                  BottomNavigationBarItem(
-                      label: '', icon: Icon(Icons.search_sharp)),
-                  BottomNavigationBarItem(
-                      label: '', icon: Icon(Icons.shopify_sharp)),
+                  BottomNavigationBarItem(label: '', icon: Icon(Icons.home)),
+                  BottomNavigationBarItem(label: '', icon: Icon(Icons.person)),
                 ]),
           ),
         ));

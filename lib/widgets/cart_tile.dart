@@ -2,7 +2,7 @@ import 'package:demo/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class CartTile extends StatelessWidget {
-  CartTile(
+  const CartTile(
       {super.key,
       required this.image,
       required this.title,
@@ -38,17 +38,17 @@ class CartTile extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.fill, image: NetworkImage(image))),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 title,
                 style: segmentText,
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 price.toString(),
                 style: segmentText,
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
         ));

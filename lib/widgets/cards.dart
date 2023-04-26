@@ -1,5 +1,7 @@
-import 'package:demo/theme/theme.dart';
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Cards extends StatelessWidget {
   Cards({super.key, required this.title, required this.image});
@@ -11,25 +13,29 @@ class Cards extends StatelessWidget {
   Widget build(BuildContext context) {
     return PhysicalModel(
       color: Colors.blueGrey,
-      borderRadius: BorderRadius.all(Radius.circular(14)),
-      elevation: 2,
+      borderRadius: const BorderRadius.all(Radius.circular(14)),
+      elevation: 10,
       child: Container(
         height: MediaQuery.of(context).size.height * 0.190,
         width: MediaQuery.of(context).size.height * 0.190,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(
-            Radius.circular(14),
+            Radius.circular(4),
           ),
           image: DecorationImage(
             fit: BoxFit.fill,
             image: NetworkImage(image),
           ),
         ),
-        child: Center(
+        child: Align(
+          alignment: Alignment.bottomCenter,
           child: Text(
             title,
             overflow: TextOverflow.ellipsis,
-            style: categoryText,
+            style: GoogleFonts.manrope(
+                color: Colors.grey,
+                fontWeight: FontWeight.w700,
+                fontSize: 16.5),
           ),
         ),
       ),

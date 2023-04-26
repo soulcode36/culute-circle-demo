@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "525732081286",
+    "project_id": "culute-circle-demo",
+    "storage_bucket": "culute-circle-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525732081286:android:0a734dd2ff65b44163eb07",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525732081286-ck416f0q4dt5i3riiaaltu8dc0sjp6nm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxsqPlkJBGIuwRi4y9sLCfPFmGObDrTTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525732081286-ck416f0q4dt5i3riiaaltu8dc0sjp6nm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

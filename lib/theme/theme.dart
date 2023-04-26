@@ -1,25 +1,28 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData appTheme = ThemeData(
-    primaryColor: Colors.grey[200],
+    primaryColor: Colors.green[900],
     buttonColor: Colors.black.withOpacity(0.9),
     canvasColor: Colors.white);
 
 TextStyle headline =
-    GoogleFonts.manrope(fontSize: 22, fontWeight: FontWeight.w600);
+    GoogleFonts.montserrat(fontSize: 22, fontWeight: FontWeight.w600);
 
 TextStyle titleText =
-    GoogleFonts.manrope(fontSize: 17, fontWeight: FontWeight.w600);
+    GoogleFonts.montserrat(fontSize: 17, fontWeight: FontWeight.w600);
 
-TextStyle caption = GoogleFonts.manrope(
-    fontSize: 14,
+TextStyle caption = GoogleFonts.montserrat(
+    fontSize: 11.4,
     color: appTheme.buttonColor.withOpacity(0.5),
     fontWeight: FontWeight.w600);
 
 TextStyle segmentText =
-    GoogleFonts.manrope(fontSize: 15, fontWeight: FontWeight.w600);
+    GoogleFonts.montserrat(fontSize: 13, fontWeight: FontWeight.w600);
+TextStyle descriptionText = GoogleFonts.montserrat(
+    color: Colors.grey[700], fontSize: 13.7, fontWeight: FontWeight.w600);
 
-TextStyle categoryText = GoogleFonts.manrope(
+TextStyle categoryText = GoogleFonts.montserrat(
     color: Colors.white, fontWeight: FontWeight.w700, fontSize: 16.5);
